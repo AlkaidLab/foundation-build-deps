@@ -46,6 +46,10 @@ list(APPEND FFMPEG_EXTRA_CONFIGURE
         --enable-avutil
         --enable-bsfs  # ensure config.h will have CONFIG_CBS_ flags
         --enable-swscale
+        # AC3 / E-AC3 audio encoders for Sunshine audio passthrough.
+        # AlkaidLab fork: keep enabled on every platform; pure-software, no
+        # external dep, ~tens of KB added to libavcodec.a.
+        --enable-encoder=ac3,eac3
 )
 
 if(BUILD_FFMPEG_AMF)
