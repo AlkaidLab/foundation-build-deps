@@ -5,10 +5,10 @@ includedir=/d/a/build-deps/build-deps/build/FFmpeg/include
 
 Name: libavcodec
 Description: FFmpeg codec library
-Version: 62.11.100
-Requires: libavutil >= 60.8.100
+Version: 62.28.100
+Requires: libavutil >= 60.26.100
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavcodec -lm -latomic -LD:/a/build-deps/build-deps/build/dist/lib -lSvtAv1Enc -L/d/a/build-deps/build-deps/build/x264/lib -lx264 -LD:/a/build-deps/build-deps/build/dist/lib -lx265 -lstdc++ -lgcc_s -lgcc -lgcc_s -lgcc -lmfuuid -lole32 -lstrmiids -lole32 -luser32
+Libs: -L${libdir}  -lavcodec -lm -latomic -LD:/a/build-deps/build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -L/d/a/build-deps/build-deps/build/x264/lib -lx264 -LD:/a/build-deps/build-deps/build/dist/ffmpeg/lib -lx265 -lstdc++ -lgcc_s -lgcc -lgcc_s -lgcc -lmfuuid -lole32 -lstrmiids -lole32 -luser32
 Libs.private: 
 Cflags: -I${includedir}

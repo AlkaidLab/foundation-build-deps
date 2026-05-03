@@ -5,10 +5,10 @@ includedir=/Users/runner/work/build-deps/build-deps/build/FFmpeg/include
 
 Name: libavcodec
 Description: FFmpeg codec library
-Version: 62.11.100
-Requires: libavutil >= 60.8.100
+Version: 62.28.100
+Requires: libavutil >= 60.26.100
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavcodec -lm -L/Users/runner/work/build-deps/build-deps/build/dist/lib -lSvtAv1Enc -lpthread -lm -L/Users/runner/work/build-deps/build-deps/build/x264/lib -lx264 -lpthread -lm -ldl -L/Users/runner/work/build-deps/build-deps/build/dist/lib -lx265 -lc++ -ldl -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs: -L${libdir}  -lavcodec -lm -L/Users/runner/work/build-deps/build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -lpthread -lm -L/Users/runner/work/build-deps/build-deps/build/x264/lib -lx264 -lpthread -lm -ldl -L/Users/runner/work/build-deps/build-deps/build/dist/ffmpeg/lib -lx265 -lc++ -ldl -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
 Libs.private: 
 Cflags: -I${includedir}
