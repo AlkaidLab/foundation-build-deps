@@ -1,4 +1,4 @@
-prefix=/Users/runner/work/build-deps/build-deps/build/dist/ffmpeg
+prefix=/Users/runner/work/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg
 exec_prefix=${prefix}
 includedir=${prefix}/include
 libdir=${exec_prefix}/lib

@@ -1,7 +1,7 @@
-prefix=/home/runner/work/build-deps/build-deps/build/FFmpeg
+prefix=/home/runner/work/foundation-build-deps/foundation-build-deps/build/FFmpeg
 exec_prefix=${prefix}
-libdir=/home/runner/work/build-deps/build-deps/build/FFmpeg/lib
-includedir=/home/runner/work/build-deps/build-deps/build/FFmpeg/include
+libdir=/home/runner/work/foundation-build-deps/foundation-build-deps/build/FFmpeg/lib
+includedir=/home/runner/work/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
 
 Name: libavutil
 Description: FFmpeg utility library
@@ -9,6 +9,6 @@ Version: 60.26.100
 Requires: 
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavutil -lm -L/home/runner/work/build-deps/build-deps/build/libva/lib -lva -latomic -pthread
+Libs: -L${libdir}  -lavutil -lm -L/home/runner/work/foundation-build-deps/foundation-build-deps/build/libva/lib -lva -latomic -pthread
 Libs.private: 
 Cflags: -I${includedir}

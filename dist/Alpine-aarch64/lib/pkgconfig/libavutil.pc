@@ -1,0 +1,14 @@
+prefix=/__w/foundation-build-deps/foundation-build-deps/build/FFmpeg
+exec_prefix=${prefix}
+libdir=/__w/foundation-build-deps/foundation-build-deps/build/FFmpeg/lib
+includedir=/__w/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 60.26.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil -lm -L/__w/foundation-build-deps/foundation-build-deps/build/libva/lib -lva -latomic -pthread
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+prefix=/__w/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: build-deps
+Description: H.265/HEVC video encoder
+Version: 4.1
+Libs: -L${libdir} -lx265
+Libs.private: -lstdc++ -lm -lssp_nonshared -lgcc_s -lgcc -lgcc_s -lgcc -lrt -ldl -lnuma
+Cflags: -I${includedir}

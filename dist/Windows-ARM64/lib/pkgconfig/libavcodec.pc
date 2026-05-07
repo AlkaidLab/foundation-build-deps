@@ -1,7 +1,7 @@
-prefix=/c/a/build-deps/build-deps/build/FFmpeg
+prefix=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg
 exec_prefix=${prefix}
-libdir=/c/a/build-deps/build-deps/build/FFmpeg/lib
-includedir=/c/a/build-deps/build-deps/build/FFmpeg/include
+libdir=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/lib
+includedir=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
 
 Name: libavcodec
 Description: FFmpeg codec library
@@ -9,6 +9,6 @@ Version: 62.28.100
 Requires: libavutil >= 60.26.100
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavcodec -lm -LC:/a/build-deps/build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -L/c/a/build-deps/build-deps/build/x264/lib -lx264 -LC:/a/build-deps/build-deps/build/dist/ffmpeg/lib -lx265 -lc++ -lunwind -lunwind -lmfuuid -lole32 -lstrmiids -lole32 -luser32
+Libs: -L${libdir}  -lavcodec -lm -LC:/a/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -L/c/a/foundation-build-deps/foundation-build-deps/build/x264/lib -lx264 -LC:/a/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lx265 -lc++ -lunwind -lunwind -lmfuuid -lole32 -lstrmiids -lole32 -luser32
 Libs.private: 
 Cflags: -I${includedir}

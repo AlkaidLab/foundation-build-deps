@@ -1,7 +1,7 @@
-prefix=/c/a/build-deps/build-deps/build/FFmpeg
+prefix=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg
 exec_prefix=${prefix}
-libdir=/c/a/build-deps/build-deps/build/FFmpeg/lib
-includedir=/c/a/build-deps/build-deps/build/FFmpeg/include
+libdir=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/lib
+includedir=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
 
 Name: libavutil
 Description: FFmpeg utility library
