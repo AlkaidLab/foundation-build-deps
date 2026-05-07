@@ -669,7 +669,7 @@ jobs:
       - release-setup
       - build
     permissions:
-      contents: read
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
@@ -691,5 +691,5 @@ jobs:
           name: ${{ needs.release-setup.outputs.release_tag }}
           prerelease: true
           tag: ${{ needs.release-setup.outputs.release_tag }}
-          token: ${{ secrets.GH_BOT_TOKEN }}
+          token: ${{ secrets.GH_BOT_TOKEN || github.token }}
           virustotal_api_key: ${{ secrets.VIRUSTOTAL_API_KEY }}
