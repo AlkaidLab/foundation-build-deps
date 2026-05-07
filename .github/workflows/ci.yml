@@ -664,7 +664,7 @@ jobs:
     name: Create Release
     if:
       needs.release-setup.outputs.publish_release == 'true' &&
-      startsWith(github.repository, 'LizardByte/')
+      startsWith(github.repository, 'AlkaidLab/')
     needs:
       - release-setup
       - build

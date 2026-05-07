@@ -18,8 +18,12 @@ option(BUILD_BOOST_SUNSHINE "Build boost for Sunshine" ON)
 # FFmpeg options
 option(BUILD_FFMPEG "Build FFmpeg" OFF)
 option(BUILD_FFMPEG_ALL_PATCHES "Apply FFmpeg patches" ON)
-option(BUILD_FFMPEG_AMF "Build FFmpeg AMF" ON)
-option(BUILD_FFMPEG_AMF_PATCHES "Apply FFmpeg AMF patches" ON)
+# AlkaidLab fork: Sunshine has its own native AMF encoder path that loads
+# amfrt64.dll at runtime via the standalone AMF SDK submodule. The FFmpeg
+# h264_amf/hevc_amf/av1_amf wrappers are no longer used and only bloat the
+# static libavcodec.a, so default these to OFF.
+option(BUILD_FFMPEG_AMF "Build FFmpeg AMF" OFF)
+option(BUILD_FFMPEG_AMF_PATCHES "Apply FFmpeg AMF patches" OFF)
 option(BUILD_FFMPEG_CBS "Build FFmpeg CBS" ON)
 option(BUILD_FFMPEG_CBS_PATCHES "Apply FFmpeg CBS patches" ON)
 option(BUILD_FFMPEG_MF "Build FFmpeg Media Foundation" ON)
