@@ -107,23 +107,6 @@ jobs:
           notes_file="${RUNNER_TEMP}/release-notes.md"
           printf '%s\n' "${RELEASE_BODY}" > "${notes_file}"
 
-          tag_ref="tags/${RELEASE_TAG}"
-          if gh api "repos/${GITHUB_REPOSITORY}/git/ref/${tag_ref}" > /dev/null 2>&1; then
-            gh api \
-              --method PATCH \
-              "repos/${GITHUB_REPOSITORY}/git/refs/${tag_ref}" \
-              -f sha="${RELEASE_TARGET}" \
-              -F force=true \
-              > /dev/null
-          else
-            gh api \
-              --method POST \
-              "repos/${GITHUB_REPOSITORY}/git/refs" \
-              -f ref="refs/tags/${RELEASE_TAG}" \
-              -f sha="${RELEASE_TARGET}" \
-              > /dev/null
-          fi
-
           mapfile -t assets < <(find artifacts -type f -name '*.tar.gz' | sort)
 
           if gh release view "${RELEASE_TAG}" --repo "${GITHUB_REPOSITORY}" > /dev/null 2>&1; then
