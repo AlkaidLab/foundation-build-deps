@@ -672,7 +672,7 @@ jobs:
             -DBUILD_${{ matrix.build }}=ON \
             -DBUILD_FFMPEG_CUDA_LLVM=${build_ffmpeg_cuda_llvm} \
             -DCMAKE_TOOLCHAIN_FILE="$CMAKE_TOOLCHAIN_FILE" \
-            -DCMAKE_INSTALL_PREFIX="$ROOT_PATH/build/dist" \
+            -DCMAKE_INSTALL_PREFIX="$GITHUB_WORKSPACE/build/dist" \
             -DPARALLEL_BUILDS=${{ steps.processor_count.outputs.PROCESSOR_COUNT || 1 }}
 
       - name: Build
