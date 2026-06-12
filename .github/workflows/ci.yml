@@ -679,13 +679,15 @@ jobs:
         run: |
           set -e
           cd "$GITHUB_WORKSPACE"
-          $MAKE_CMD -C build --jobs=${{ steps.processor_count.outputs.PROCESSOR_COUNT || 1 }}
+          make_cmd="${{ startsWith(matrix.shell, 'freebsd') && 'gmake' || 'make' }}"
+          "$make_cmd" -C build --jobs=${{ steps.processor_count.outputs.PROCESSOR_COUNT || 1 }}
 
       - name: Install
         run: |
           set -e
           cd "$GITHUB_WORKSPACE"
-          $MAKE_CMD -C build install
+          make_cmd="${{ startsWith(matrix.shell, 'freebsd') && 'gmake' || 'make' }}"
+          "$make_cmd" -C build install
 
       - name: Sync FreeBSD build output to host
         if: startsWith(matrix.shell, 'freebsd')
