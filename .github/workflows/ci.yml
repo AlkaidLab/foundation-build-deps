@@ -18,7 +18,6 @@ on:
         type: choice
         options:
           - ALL
-          - BOOST
           - FFMPEG
       platform:
         description: Platform or platform group to build.
@@ -68,12 +67,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
 
       - name: Release Setup
         if: github.event_name != 'workflow_dispatch'
         id: release-setup
-        uses: LizardByte/actions/actions/release_setup@4125866b7b655a6fe038b0e22a43a4c5d259af79  # v2026.417.35446
+        uses: LizardByte/actions/actions/release_setup@200eaeb897a2b065a65cb6f16b41077432007490  # v2026.605.34721
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -134,7 +133,7 @@ jobs:
               "name": "FreeBSD-aarch64",
               "os": "ubuntu-latest",
               "arch": "aarch64",
-              "bsd_release": "14.3",
+              "bsd_release": "14.4",
               "generator": "Unix Makefiles",
               "shell": "freebsd {0}",
             },
@@ -142,7 +141,7 @@ jobs:
               "name": "FreeBSD-amd64",
               "os": "ubuntu-latest",
               "arch": "x86_64",
-              "bsd_release": "14.3",
+              "bsd_release": "14.4",
               "generator": "Unix Makefiles",
               "shell": "freebsd {0}",
             },
@@ -191,7 +190,7 @@ jobs:
 
           build_filter = os.environ["BUILD_FILTER"]
           platform_filter = os.environ["PLATFORM_FILTER"]
-          builds = ["BOOST", "FFMPEG"] if build_filter == "ALL" else [build_filter]
+          builds = ["FFMPEG"] if build_filter == "ALL" else [build_filter]
 
           def platform_matches(platform):
             return (
@@ -266,7 +265,7 @@ jobs:
             wayland-dev
 
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
         with:
           submodules: recursive
 
@@ -340,7 +339,6 @@ jobs:
             dependencies+=("g++-${LINUX_GCC_VERSION}-powerpc64le-linux-gnu")
             cross_compile=true
             package_arch="ppc64el"
-            dependencies+=("libquadmath0:$package_arch")  # required for cross compiling Boost 1.89+
           else
             dependencies+=("gcc-${LINUX_GCC_VERSION}")
             dependencies+=("g++-${LINUX_GCC_VERSION}")
@@ -602,7 +600,7 @@ jobs:
 
       - name: Setup FreeBSD
         if: startsWith(matrix.shell, 'freebsd')
-        uses: vmactions/freebsd-vm@d1e65811565151536c0c894fff74f06351ed26e6  # v1.4.5
+        uses: vmactions/freebsd-vm@a6de9343ef5747433d9c25784c90e84998b9d69a  # v1.4.6
         with:
           arch: ${{ matrix.arch }}
           cpu: ${{ steps.processor_count.outputs.PROCESSOR_COUNT }}
@@ -725,12 +723,6 @@ jobs:
           cd "$GITHUB_WORKSPACE/build/dist"
 
           # Create archives based on what was built
-          if [ "${{ matrix.build }}" = "BOOST" ] || [ "${{ matrix.build }}" = "ALL" ]; then
-            if [ -d "boost" ]; then
-              tar -czf "../../${{ matrix.name }}-boost.tar.gz" boost
-            fi
-          fi
-
           if [ "${{ matrix.build }}" = "FFMPEG" ] || [ "${{ matrix.build }}" = "ALL" ]; then
             if [ -d "ffmpeg" ]; then
               tar -czf "../../${{ matrix.name }}-ffmpeg.tar.gz" ffmpeg
@@ -774,7 +766,7 @@ jobs:
         run: ls -R artifacts
 
       - name: Create/Update GitHub Release
-        uses: LizardByte/actions/actions/release_create@4125866b7b655a6fe038b0e22a43a4c5d259af79  # v2026.417.35446
+        uses: LizardByte/actions/actions/release_create@200eaeb897a2b065a65cb6f16b41077432007490  # v2026.605.34721
         with:
           allowUpdates: false
           body: ${{ needs.release-setup.outputs.release_body }}
