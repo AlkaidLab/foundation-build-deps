@@ -5,7 +5,7 @@ includedir=/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
 
 Name: libavutil
 Description: FFmpeg utility library
-Version: 60.26.100
+Version: 60.26.101
 Requires: 
 Requires.private: 
 Conflicts:

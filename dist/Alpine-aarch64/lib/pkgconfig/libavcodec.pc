@@ -5,10 +5,10 @@ includedir=/__w/foundation-build-deps/foundation-build-deps/build/FFmpeg/include
 
 Name: libavcodec
 Description: FFmpeg codec library
-Version: 62.28.100
-Requires: libavutil >= 60.26.100
+Version: 62.28.101
+Requires: libavutil >= 60.26.101
 Requires.private: 
 Conflicts:
-Libs: -L${libdir}  -lavcodec -pthread -lm -latomic -L/__w/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -lpthread -lm -L/__w/foundation-build-deps/foundation-build-deps/build/x264/lib -lx264 -lpthread -lm -ldl -L/__w/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lx265 -lstdc++ -lm -lssp_nonshared -lgcc_s -lgcc -lgcc_s -lgcc -lrt -ldl -lnuma -L/__w/foundation-build-deps/foundation-build-deps/build/libva/lib -lva
+Libs: -L${libdir}  -lavcodec -pthread -lm -latomic -L/__w/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lSvtAv1Enc -lm -L/__w/foundation-build-deps/foundation-build-deps/build/x264/lib -lx264 -lpthread -lm -ldl -L/__w/foundation-build-deps/foundation-build-deps/build/dist/ffmpeg/lib -lx265 -lstdc++ -lm -lssp_nonshared -lgcc_s -lgcc -lgcc_s -lgcc -lrt -ldl -lnuma -L/__w/foundation-build-deps/foundation-build-deps/build/libva/lib -lva
 Libs.private: 
 Cflags: -I${includedir}

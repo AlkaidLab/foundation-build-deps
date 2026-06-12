@@ -5,8 +5,8 @@ includedir=/home/runner/work/foundation-build-deps/foundation-build-deps/build/F
 
 Name: libswscale
 Description: FFmpeg image rescaling library
-Version: 9.5.100
-Requires: libavutil >= 60.26.100
+Version: 9.5.101
+Requires: libavutil >= 60.26.101
 Requires.private: 
 Conflicts:
 Libs: -L${libdir}  -lswscale -lm -latomic
