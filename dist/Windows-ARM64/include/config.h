@@ -6,7 +6,7 @@
 #define CONFIG_THIS_YEAR 2026
 #define FFMPEG_DATADIR "/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/share/ffmpeg"
 #define AVCONV_DATADIR "/c/a/foundation-build-deps/foundation-build-deps/build/FFmpeg/share/ffmpeg"
-#define CC_IDENT "clang version 22.1.7 (https://github.com/msys2/MINGW-packages b8f306ad57e0c8f3f15aed0dc809d7e3e8e2eee9)"
+#define CC_IDENT "clang version 22.1.8 (https://github.com/msys2/MINGW-packages 6e4e79c2f86eeb534e324e583f2057dc9fd5ecab)"
 #define OS_NAME mingw32
 #define EXTERN_PREFIX ""
 #define EXTERN_ASM 
