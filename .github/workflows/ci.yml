@@ -67,12 +67,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v7.0.0
 
       - name: Release Setup
         if: github.event_name != 'workflow_dispatch'
         id: release-setup
-        uses: LizardByte/actions/actions/release_setup@200eaeb897a2b065a65cb6f16b41077432007490  # v2026.605.34721
+        uses: LizardByte/actions/actions/release_setup@a46850981292c4bbc0c41715f286ad95adaaaf4a  # v2026.625.20301
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -265,7 +265,7 @@ jobs:
             wayland-dev
 
       - name: Checkout
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10  # v6.0.3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0  # v7.0.0
         with:
           submodules: recursive
 
@@ -482,7 +482,7 @@ jobs:
 
       - name: Setup msys2 Windows
         if: runner.os == 'Windows'
-        uses: msys2/setup-msys2@e9898307ac31d1a803454791be09ab9973336e1c  # v2.31.1
+        uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884  # v2.32.0
         with:
           msystem: ${{ matrix.msystem }}
           update: true
@@ -600,7 +600,7 @@ jobs:
 
       - name: Setup FreeBSD
         if: startsWith(matrix.shell, 'freebsd')
-        uses: vmactions/freebsd-vm@a6de9343ef5747433d9c25784c90e84998b9d69a  # v1.4.6
+        uses: vmactions/freebsd-vm@5a72679103d223925653750faa878a143340fbd0  # v1.5.0
         with:
           arch: ${{ matrix.arch }}
           cpu: ${{ steps.processor_count.outputs.PROCESSOR_COUNT }}
@@ -768,7 +768,7 @@ jobs:
         run: ls -R artifacts
 
       - name: Create/Update GitHub Release
-        uses: LizardByte/actions/actions/release_create@200eaeb897a2b065a65cb6f16b41077432007490  # v2026.605.34721
+        uses: LizardByte/actions/actions/release_create@a46850981292c4bbc0c41715f286ad95adaaaf4a  # v2026.625.20301
         with:
           allowUpdates: false
           body: ${{ needs.release-setup.outputs.release_body }}
