@@ -37,14 +37,19 @@ list(APPEND FFMPEG_EXTRA_CONFIGURE
         --extra-ldflags='-L${CMAKE_CURRENT_BINARY_DIR_UNIX}/libva/lib'
         --extra-ldflags='-L${CMAKE_CURRENT_BINARY_DIR_UNIX}/vulkan/lib'
         --extra-libs='-lpthread -lm'
+        # ffmpeg-configure-20261117: component selection and metadata BSF dependencies.
+        # Disable programs/libraries as well as components; enable only the host's encode/CBS surface.
         --disable-all
+        --disable-everything
         --disable-autodetect
         --disable-iconv
         --enable-gpl
         --enable-static
         --enable-avcodec
         --enable-avutil
-        --enable-bsfs  # ensure config.h will have CONFIG_CBS_ flags
+        # ffmpeg-cbs-20261117: cbs_type_table. These select CBS for H.264, HEVC and AV1
+        # without registering every filter (and its parser/decoder dependencies).
+        --enable-bsf=h264_metadata,hevc_metadata,av1_metadata
         --enable-swscale
         # AC3 / E-AC3 audio encoders for Sunshine audio passthrough.
         # AlkaidLab fork: keep enabled on every platform; pure-software, no
