@@ -1,0 +1,92 @@
+{
+  "base": "ba45948e5e2d80e3e6d24fd2cabca9494be6812e",
+  "tag": "v2026.1117.34924.杂鱼",
+  "module_id": "97AA338EDE642831638641DE382E83601",
+  "exe_sha256": "f6a9d98cf4c76e8b0a1e63068e0624bef6a81c2ae262a241f57c27ebf265e4c2",
+  "exe_bytes": 57876480,
+  "sections": [
+    {
+      "name": ".text",
+      "raw_bytes": 47286784,
+      "virtual_bytes": 47286640,
+      "rva": 4096
+    },
+    {
+      "name": ".data",
+      "raw_bytes": 98816,
+      "virtual_bytes": 98352,
+      "rva": 47292416
+    },
+    {
+      "name": ".rodata",
+      "raw_bytes": 190464,
+      "virtual_bytes": 190208,
+      "rva": 47394816
+    },
+    {
+      "name": ".rdata",
+      "raw_bytes": 7760384,
+      "virtual_bytes": 7760064,
+      "rva": 47587328
+    },
+    {
+      "name": ".buildid",
+      "raw_bytes": 512,
+      "virtual_bytes": 53,
+      "rva": 55349248
+    },
+    {
+      "name": ".pdata",
+      "raw_bytes": 663040,
+      "virtual_bytes": 662544,
+      "rva": 55353344
+    },
+    {
+      "name": ".xdata",
+      "raw_bytes": 1503744,
+      "virtual_bytes": 1503660,
+      "rva": 56016896
+    },
+    {
+      "name": ".bss",
+      "raw_bytes": 0,
+      "virtual_bytes": 3153904,
+      "rva": 57524224
+    },
+    {
+      "name": ".edata",
+      "raw_bytes": 3072,
+      "virtual_bytes": 2805,
+      "rva": 60678144
+    },
+    {
+      "name": ".idata",
+      "raw_bytes": 40448,
+      "virtual_bytes": 40152,
+      "rva": 60682240
+    },
+    {
+      "name": ".tls",
+      "raw_bytes": 3072,
+      "virtual_bytes": 2952,
+      "rva": 60723200
+    },
+    {
+      "name": ".rsrc",
+      "raw_bytes": 167936,
+      "virtual_bytes": 167720,
+      "rva": 60727296
+    },
+    {
+      "name": ".reloc",
+      "raw_bytes": 157184,
+      "virtual_bytes": 156852,
+      "rva": 60895232
+    }
+  ],
+  "function_coverage_bytes": 35539663,
+  "line_mapped_union_bytes": 22484967,
+  "text_without_line_mapping_bytes": 24801817,
+  "limitation": "Source-line coverage only, not archive/object attribution. Inlined lines can have different source owners. The stripped PE and Breakpad artifact cannot identify external static archives or unlabelled data. A link map is required for the requested library/object top 20.",
+  "artifact_origin": "https://github.com/AlkaidLab/foundation-sunshine/releases/tag/v2026.1117.34924.%E6%9D%82%E9%B1%BC"
+}

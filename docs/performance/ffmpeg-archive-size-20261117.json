@@ -1,0 +1,105 @@
+{
+  "method": "Same GNU compiler and pinned FFmpeg 8.1.2; default configure optimization; minimal Linux software fixture without external encoders; raw archives and per-file raw DEFLATE level 9; these are NOT linked Windows executable or installer sizes.",
+  "rows": [
+    {
+      "arm": "base",
+      "trial": 1,
+      "read_compress_hash_ms": 993.8388520095032,
+      "files": [
+        {
+          "name": "libavcodec/libavcodec.a",
+          "raw_bytes": 15033326,
+          "deflate_bytes": 6503150,
+          "sha256": "a857d7af898ab9044caf422ffe2fe7b7996e6748d283c3adf84bb388cf679082"
+        },
+        {
+          "name": "libavutil/libavutil.a",
+          "raw_bytes": 3832530,
+          "deflate_bytes": 1626158,
+          "sha256": "c6ebaca9cfcb908ac9dd38f057a2004e069f4c3c85c191e9a804622cc96df6e2"
+        },
+        {
+          "name": "libswscale/libswscale.a",
+          "raw_bytes": 6897706,
+          "deflate_bytes": 2617213,
+          "sha256": "91ddd6711df909b37089773f2161550e06c469dbcbdaa6eaf86fb9a697b467d5"
+        }
+      ]
+    },
+    {
+      "arm": "slim",
+      "trial": 1,
+      "read_compress_hash_ms": 737.1581790066557,
+      "files": [
+        {
+          "name": "libavcodec/libavcodec.a",
+          "raw_bytes": 8806498,
+          "deflate_bytes": 3763225,
+          "sha256": "7273a72ebcb7c52423bef9ea1d3571e01097adc08ba5c9a413e114fc81542d06"
+        },
+        {
+          "name": "libavutil/libavutil.a",
+          "raw_bytes": 3832610,
+          "deflate_bytes": 1626188,
+          "sha256": "3b0422cfb678347ff3fe56103ecee9bf17e0851d31d0900f5fe745905d3da354"
+        },
+        {
+          "name": "libswscale/libswscale.a",
+          "raw_bytes": 6897754,
+          "deflate_bytes": 2617257,
+          "sha256": "3ccd1e6e3e11d5f3f8fc79032c9b1f8f8720aef9a83e0a53e449b0b401a5a310"
+        }
+      ]
+    },
+    {
+      "arm": "slim",
+      "trial": 2,
+      "read_compress_hash_ms": 758.7574630015297,
+      "files": [
+        {
+          "name": "libavcodec/libavcodec.a",
+          "raw_bytes": 8806498,
+          "deflate_bytes": 3763225,
+          "sha256": "7273a72ebcb7c52423bef9ea1d3571e01097adc08ba5c9a413e114fc81542d06"
+        },
+        {
+          "name": "libavutil/libavutil.a",
+          "raw_bytes": 3832610,
+          "deflate_bytes": 1626188,
+          "sha256": "3b0422cfb678347ff3fe56103ecee9bf17e0851d31d0900f5fe745905d3da354"
+        },
+        {
+          "name": "libswscale/libswscale.a",
+          "raw_bytes": 6897754,
+          "deflate_bytes": 2617257,
+          "sha256": "3ccd1e6e3e11d5f3f8fc79032c9b1f8f8720aef9a83e0a53e449b0b401a5a310"
+        }
+      ]
+    },
+    {
+      "arm": "base",
+      "trial": 2,
+      "read_compress_hash_ms": 958.9736799971433,
+      "files": [
+        {
+          "name": "libavcodec/libavcodec.a",
+          "raw_bytes": 15033326,
+          "deflate_bytes": 6503150,
+          "sha256": "a857d7af898ab9044caf422ffe2fe7b7996e6748d283c3adf84bb388cf679082"
+        },
+        {
+          "name": "libavutil/libavutil.a",
+          "raw_bytes": 3832530,
+          "deflate_bytes": 1626158,
+          "sha256": "c6ebaca9cfcb908ac9dd38f057a2004e069f4c3c85c191e9a804622cc96df6e2"
+        },
+        {
+          "name": "libswscale/libswscale.a",
+          "raw_bytes": 6897706,
+          "deflate_bytes": 2617213,
+          "sha256": "91ddd6711df909b37089773f2161550e06c469dbcbdaa6eaf86fb9a697b467d5"
+        }
+      ]
+    }
+  ]
+}
